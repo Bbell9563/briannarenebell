@@ -9,7 +9,7 @@ import Resume from './components/Resume'
 import Portfolio from './components/Portfolio'
 
 class App extends React.Component {
-  state = { windowHeight: window.innerHeight}
+  state = { windowHeight: window.innerHeight,showSide: false }
 
   componentDidMount() {window.addEventListener('resize', this.handleResize)}
 
@@ -19,19 +19,24 @@ class App extends React.Component {
     })
   }
 
+  toggleSideBar = () => {
+    const { showSide } = this.state
+    this.setState({ showSide: !showSide })
+  }
+
   render() {
-    const { windowHeight} = this.state
+    const { windowHeight, showSide} = this.state
     return (
       <div style={{ ...appStyle.window, minHeight: windowHeight }}>
         <div style={appStyle.navContainer}>
-          <NavBar />
+          <NavBar toggleSideBar={this.toggleSideBar} showSide={showSide}/>
         </div>
         <div style={appStyle.pageContainer}>
           <Switch>
-            <Route exact path='/' component={Home}/>
-            <Route exact path='/contactform' component={ContactForm} />
-            <Route exact path='/portfolio' component={Portfolio} />
-            <Route exact path='/resume' component={Resume} />
+            <Route exact path='/' component={()=> <Home toggleSideBar={this.toggleSideBar} showSide={showSide}/>}/>
+            <Route exact path='/contactform' component={()=> <ContactForm toggleSideBar={this.toggleSideBar} showSide={showSide} />} />
+            <Route exact path='/portfolio' component={()=> <Portfolio toggleSideBar={this.toggleSideBar} showSide={showSide} />} />
+            <Route exact path='/resume' component={()=> <Resume toggleSideBar={this.toggleSideBar} showSide={showSide} />} />
           </Switch>
         </div>
       </div>

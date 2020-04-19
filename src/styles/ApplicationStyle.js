@@ -29,6 +29,37 @@ export const style = {
     fontSize:'1em'
   }
 }
+export const mobile = {
+  contactHolder: {
+    border: '1px solid white',
+    borderRadius: '5px',
+    backgroundColor:'#393d59',
+    padding:'1%',
+    width:'25%',
+    textAlign:'center',
+  },
+  menuHolder: {
+    backgroundColor: '#0f111a',
+    color: '#ffffff',
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+  left: {
+    width: '50%',
+  },
+  right: {
+    display: 'flex',
+    width: '70%',
+    justifyContent: 'flex-end'
+  },
+  item: {
+    marginLeft: '1%',
+    color:'white',
+    textDecoration:'none',
+    margin: 'auto 1%',
+    fontSize:'1em'
+  }
+}
 
 export const appStyle = {
   window:{
@@ -127,6 +158,7 @@ export const homeMobile ={
     color:'white',
     height:'100%',
     position:'relative',
+    width:'100%'
   },
   photo: {
     display: 'block',

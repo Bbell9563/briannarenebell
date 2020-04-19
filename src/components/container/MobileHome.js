@@ -3,6 +3,7 @@ import { homeMobile} from '../../styles/ApplicationStyle'
 import HomePhoto from '../../images/croppedUniform.png'
 import { Image, Icon } from 'semantic-ui-react'
 import Keyboard from '../../images/keyboard.jpg'
+import { Link } from 'react-router-dom'
 
 
 export default class MobileDesktop extends React.Component {
@@ -19,6 +20,7 @@ export default class MobileDesktop extends React.Component {
   render() {
     const { photoHeight} = this.state
     return (
+      <div style={{display:'flex'}}>
       <div style={homeMobile.container}>
         <div style={{ ...homeMobile.header, height: window.innerHeight }}>
           <div style={{ ...homeMobile.backgroundImage, height: window.innerHeight }}>
@@ -65,6 +67,27 @@ export default class MobileDesktop extends React.Component {
 
         </div>
       </div>
+      {this.props.showSide ? 
+      <div style={{fontSize:'5vw', color:'#393d59', backgroundColor:'#1a1b2b'}}>
+        <Link style={{color:'#393d59'}} to='/portfolio' onClick={this.props.toggleSideBar}>
+          <div style={style.sideBar}>Portfolio</div>
+          </Link>
+        <Link style={{color:'#393d59'}} to='/resume' onClick={this.props.toggleSideBar}>
+          <div style={style.sideBar}>Resume</div>
+          </Link>
+        <Link style={{color:'#393d59'}} to='/contactform' onClick={this.props.toggleSideBar}>
+          <div style={style.sideBar}>Contact</div>
+          </Link>
+      </div> 
+      
+      : <></>}
+      </div>
     )
+  }
+}
+
+const style={
+  sideBar:{
+    padding:'20%'
   }
 }

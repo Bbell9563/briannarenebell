@@ -26,7 +26,7 @@ export default class Home extends React.Component {
     }
     else{
       return(
-        <HomeMobile />
+        <HomeMobile showSide={this.props.showSide} toggleSideBar={this.props.toggleSideBar}/>
       )
     }
   }
