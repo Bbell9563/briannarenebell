@@ -9,17 +9,18 @@ export const form = {
   },
   header:{
     color:'white',
-    fontSize:'3vw',
     textAlign:'center',
     paddingBottom:'2%',
   },
   input:{
     color:'white',
-    marginTop:'2%'
+    marginTop:'2%',
+    minWidth:'400px'
   },
   buttonHolder:{
     display:'flex',
-    justifyContent:'space-between'
+    justifyContent:'space-between',
+    flexWrap:'wrap'
   },
   button:{
     backgroundColor:'white',
@@ -30,6 +31,7 @@ export const form = {
     textAlign:'center',
     padding:'1%', 
     margin:'2% 0',
-    cursor:'pointer'
+    cursor:'pointer',
+    minWidth:'200px'
   }
 }

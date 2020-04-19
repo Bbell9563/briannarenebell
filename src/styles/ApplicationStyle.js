@@ -34,7 +34,7 @@ export const appStyle = {
   window:{
     display:'flex',
     flexDirection:'column',
-    backgroundImage: 'linear-gradient(to bottom right ,#17181f ,#393d59)'
+    backgroundImage: 'linear-gradient(to bottom right ,#0c0d12,#242b4d,#6d74a6'
   },
   navContainer:{
     height:'8%'
@@ -73,7 +73,6 @@ export const homeStyle ={
     display: 'inline-block',
     verticalAlign: 'top',
     width: '40%',
-    height:'500px',
     overflow: 'hidden',
   },
   backgroundImage:{
