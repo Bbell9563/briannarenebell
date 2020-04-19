@@ -20,7 +20,7 @@ toggleSideBar = () => {
 
   render() {
     const {width } = this.state
-    if (width > 1100) {
+    if (width > 1000) {
       return (
         <DesktopNav />
       )
