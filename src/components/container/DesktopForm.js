@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form, Input } from 'semantic-ui-react'
+import { Form} from 'semantic-ui-react'
 import { form } from '../../styles/FormStyle'
 import { Link } from 'react-router-dom'
 

@@ -64,7 +64,6 @@ export const mobile = {
 export const appStyle = {
   window:{
     display:'flex',
-    flexDirection:'column',
     backgroundImage: 'linear-gradient(to bottom right ,#0c0d12,#242b4d,#6d74a6'
   },
   navContainer:{
@@ -190,7 +189,7 @@ export const homeMobile ={
     flexDirection:'column',
     top:'30%',
     left:'30%',
-    transform:'translate(-40%, -32%)',
+    transform:'translate(-40%, -35%)',
     width:'80%',
     backgroundColor:'rgba(25, 27, 41, .8)',
     borderRadius:'15px',

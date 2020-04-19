@@ -8,8 +8,7 @@ import Keyboard from '../../images/keyboard.jpg'
 export default class HomeDesktop extends React.Component {
   state = {
     photoHeight: (window.innerWidth / 2.5),
-    photoWidth: (window.innerWidth / 1.7),
-    width: window.innerWidth
+    photoWidth: (window.innerWidth / 1.7)
   }
 
   componentDidMount() { window.addEventListener('resize', this.handleResize) }
@@ -17,8 +16,7 @@ export default class HomeDesktop extends React.Component {
   handleResize = () => {
     this.setState({
       photoHeight: (window.innerWidth / 2.5),
-      photoWidth: (window.innerWidth / 1.7),
-      width: window.innerWidth
+      photoWidth: (window.innerWidth / 1.7)
     })
   }
 
@@ -26,7 +24,7 @@ export default class HomeDesktop extends React.Component {
   makeIconSmaller = (id) => { document.getElementById(id).style.transform = 'scale(.9)' }
 
   render() {
-    const { photoHeight, photoWidth, width } = this.state
+    const { photoHeight, photoWidth } = this.state
     return (
       <div style={homeStyle.container}>
         <div style={{ ...homeStyle.header, height: window.innerHeight }}>

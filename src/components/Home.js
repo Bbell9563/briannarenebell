@@ -19,7 +19,7 @@ export default class Home extends React.Component {
 
   render() {
     const {width } = this.state
-    if (width > 1100) {
+    if (width > 981) {
       return (
         <HomeDesktop />
       )
