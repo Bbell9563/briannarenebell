@@ -26,43 +26,35 @@ class ContactForm extends Component {
     return (
       <Form style={form.container} onSubmit={this.handleSubmit}>
         <div style={form.header}>
-          <h2>Contact Me!</h2>
+          <h1>Contact Me!</h1>
         </div>
-        <Form.Field style={form.input}>
-          <label style={{ color: 'white' }}>First Name</label>
-          <Input
-            placeholder='First Name'
-            autoFocus
-            name='f_name' value={f_name}
-          />
-        </Form.Field>
-        <Form.Field style={form.input}>
-          <label style={{ color: 'white' }}>Last Name</label>
-          <Input
-            placeholder='Last Name'
-            name='l_name'
-            value={l_name}
-            onChange={this.handleChange}
-          />
-        </Form.Field>
-        <Form.Field style={form.input}>
-          <label style={{ color: 'white' }}>Email</label>
-          <Input
-            placeholder='Email'
-            name='email_address'
-            value={email_address}
-            onChange={this.handleChange}
-          />
-        </Form.Field>
-        <Form.Field style={form.input}>
-          <label style={{ color: 'white' }}>Message</label>
-          <Form.TextArea
-            placeholder='Your Message ...'
-            name='message'
-            value={message}
-            onChange={this.handleChange}
-          />
-        </Form.Field>
+        <Form.Input style={form.input}
+          placeholder='First Name'
+          label='First Name'
+          autoFocus
+          name='f_name' value={f_name}
+        />
+        <Form.Input style={form.input}
+          placeholder='Last Name'
+          label='Last Name'
+          name='l_name'
+          value={l_name}
+          onChange={this.handleChange}
+        />
+        <Form.Input style={form.input}
+          label='Email'
+          placeholder='Email'
+          name='email_address'
+          value={email_address}
+          onChange={this.handleChange}
+        />
+        <Form.TextArea style={form.input}
+          label='Message'
+          placeholder='Your Message ...'
+          name='message'
+          value={message}
+          onChange={this.handleChange}
+        />
         <div style={form.buttonHolder}>
           <Link to='/' style={{ color: '#a33636', ...form.button, backgroundColor: '#cccccc' }}><div>Cancel</div></Link>
           <div style={{ ...form.button, backgroundColor: '#32247d', color: 'white' }} onClick={this.handleSubmit}>Submit</div>

@@ -1,21 +1,19 @@
 export const form = {
   container:{
-    margin:'8% 10%',
-    backgroundImage: 'linear-gradient(to bottom right ,#2c314d ,#60688f)',
+    margin:'5% 20%',
+    backgroundColor: '#babecc',
     borderRadius:'10px',
     boxShadow:'0px 5px 20px #17181f',
-    color:'white',
     padding:'2%'
   },
   header:{
-    color:'white',
     textAlign:'center',
     paddingBottom:'2%',
   },
   input:{
     color:'white',
     marginTop:'2%',
-    minWidth:'400px'
+    backgroundColor:'none'
   },
   buttonHolder:{
     display:'flex',
