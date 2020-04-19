@@ -74,11 +74,7 @@ export const homeStyle ={
     verticalAlign: 'top',
     width: '40%',
     height:'500px',
-    marginRight: '.5em',
-    marginBottom: '.3em',
     overflow: 'hidden',
-    borderRadius:'50%',
-    boxShadow:'0px 5px 15px #222'
   },
   backgroundImage:{
     filter:'blur(8px)',
@@ -91,7 +87,10 @@ export const homeStyle ={
     top:'40%',
     left:'40%',
     transform:'translate(-50%, -50%)',
-    width:'70%'
+    width:'70%',
+    backgroundColor:'rgba(25, 27, 41, .6)',
+    border:'1px solid #70738a',
+    paddingTop:'2%'
   },
   description:{
     width:'70%',
@@ -100,11 +99,13 @@ export const homeStyle ={
     display:'flex',
     flexDirection:'column',
     justifyContent:'center',
-    backgroundColor:'rgba(25, 27, 41, .6)',
-    border:'1px solid #70738a'
+    
   },
   header:{
     boxShadow:'0px 5px 20px #17181f',
     overflow:'hidden'
+  },
+  extraInfo:{
+    margin:'3% 10%'
   }
 }

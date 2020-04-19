@@ -9,6 +9,7 @@ export const form = {
   },
   header:{
     color:'white',
+    fontSize:'3vw',
     textAlign:'center',
     paddingBottom:'2%',
   },
