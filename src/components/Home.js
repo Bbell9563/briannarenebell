@@ -1,9 +1,9 @@
 import React from 'react'
 import { homeStyle } from '../styles/ApplicationStyle'
 import HomePhoto from '../images/croppedUniform.png'
-import { Image, Responsive, Icon } from 'semantic-ui-react'
+import { Image, Icon } from 'semantic-ui-react'
 import Keyboard from '../images/keyboard.jpg'
-import PropTypes from 'prop-types';
+import MediaQuery from 'react-responsive'
 
 
 export default class HomeDesktop extends React.Component {
@@ -29,6 +29,12 @@ export default class HomeDesktop extends React.Component {
     const { photoHeight, photoWidth } = this.state
     return (
       <div style={homeStyle.container}>
+        <MediaQuery minDeviceWidth={1224} device={{ deviceWidth: 1600 }}>
+          <p>You are a desktop or laptop</p>
+          <MediaQuery minDeviceWidth={1824}>
+            <p>You also have a huge screen</p>
+          </MediaQuery>
+        </MediaQuery>
         <div style={{ ...homeStyle.header, height: window.innerHeight }}>
           <div style={{ ...homeStyle.backgroundImage, height: window.innerHeight }}>
             <div style={homeStyle.imagePartial}>
@@ -46,17 +52,17 @@ export default class HomeDesktop extends React.Component {
                 <h3 style={{ fontSize: '1.5vw', margin: '0px' }}>Geospatial Engineer </h3>
               </div>
               <div>
-                <a style={{color:'white'}} href='https://github.com/Bbell9563'>
-                <Icon id='git' name='github' size='huge'
-                  onMouseEnter={() => this.makeIconBigger('git')}
-                  onMouseOut={() => this.makeIconSmaller('git')}
-                />
+                <a style={{ color: 'white' }} href='https://github.com/Bbell9563'>
+                  <Icon id='git' name='github' size='huge'
+                    onMouseEnter={() => this.makeIconBigger('git')}
+                    onMouseOut={() => this.makeIconSmaller('git')}
+                  />
                 </a>
-                <a style={{color:'white'}} href='https://www.linkedin.com/in/briannarenebell/'>
-                <Icon id='link' name='linkedin' size='huge'
-                  onMouseEnter={() => this.makeIconBigger('link')}
-                  onMouseOut={() => this.makeIconSmaller('link')}
-                />
+                <a style={{ color: 'white' }} href='https://www.linkedin.com/in/briannarenebell/'>
+                  <Icon id='link' name='linkedin' size='huge'
+                    onMouseEnter={() => this.makeIconBigger('link')}
+                    onMouseOut={() => this.makeIconSmaller('link')}
+                  />
                 </a>
               </div>
             </div>
