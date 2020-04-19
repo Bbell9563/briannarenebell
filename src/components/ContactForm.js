@@ -10,28 +10,15 @@ class ContactForm extends Component {
     l_name:'',
     email_address:'',
     message:'',
-    validEmail: false
   }
   state= {...this.defaultValues}
 
   handleChange = (e, { name, value }) => {
     this.setState({ ...this.state, [name]: value });
-    if (name === 'email_address') {
-      this.emailChange(value)
-    }
+
   };
-
-  emailChange = (email) => {
-    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (re.test(email)) { this.setState({ validEmail: true, }) }
-    else{this.setState({validEmail: false})}
-  }
-
   handleSubmit = () => {
-    if(this.state.validEmail === true){
       this.setState({...this.defaultValues})
-    }
-    else{alert('invalid email')}
   }
 
   render() {
