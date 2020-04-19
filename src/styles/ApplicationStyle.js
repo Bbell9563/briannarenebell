@@ -74,19 +74,18 @@ export const homeStyle ={
     verticalAlign: 'top',
     width: '40%',
     overflow: 'hidden',
-  },
-  backgroundImage:{
-    filter:'blur(8px)',
+
+    float:'right'
   },
   mainInfo:{
-    margin: '2% 10%',
+    margin: '2% 12%',
     display:'flex',
     justifyContent:'space-between',
     position:'absolute',
-    top:'40%',
-    left:'40%',
-    transform:'translate(-50%, -50%)',
-    width:'70%',
+    top:'30%',
+    left:'30%',
+    transform:'translate(-40%, -40%)',
+    width:'80%',
     backgroundColor:'rgba(25, 27, 41, .6)',
     border:'1px solid #70738a',
     paddingTop:'2%'
@@ -102,9 +101,24 @@ export const homeStyle ={
   },
   header:{
     boxShadow:'0px 5px 20px #17181f',
-    overflow:'hidden'
+    overflow:'hidden',
   },
   extraInfo:{
     margin:'3% 10%'
-  }
+  },
+  partial:{
+    width:'30%',
+    backgroundColor:'#101321'
+  },
+  imagePartial:{
+    overflow:'hidden',
+    width:'100%',
+    height:'100%',
+    display: 'inline-block',
+    verticalAlign: 'top',
+    backgroundColor:'#161b30',
+  },
+  backgroundImage:{
+    display:'flex',
+  },
 }
