@@ -13,10 +13,13 @@ class DesktopContactForm extends Component {
   state = { ...this.defaultValues }
 
   handleChange = (e, { name, value }) => {
+    console.log(name)
+    console.log(value)
     this.setState({ ...this.state, [name]: value });
 
   };
-  handleSubmit = () => {
+  handleSubmit = (e) => {
+    e.preventDefault()
     this.setState({ ...this.defaultValues })
   }
 
@@ -32,6 +35,7 @@ class DesktopContactForm extends Component {
           label='First Name'
           autoFocus
           name='f_name' value={f_name}
+          onChange={this.handleChange}
         />
         <Form.Input style={form.input}
           placeholder='Last Name'

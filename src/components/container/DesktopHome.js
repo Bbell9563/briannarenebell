@@ -12,6 +12,7 @@ export default class HomeDesktop extends React.Component {
   }
 
   componentDidMount() { window.addEventListener('resize', this.handleResize) }
+  componentWillUnmount() {window.removeEventListener('resize', this.handleResize) }
 
   handleResize = () => {
     this.setState({
@@ -39,7 +40,7 @@ export default class HomeDesktop extends React.Component {
           <div style={homeStyle.mainInfo}>
             <div style={homeStyle.description}>
               <div>
-                <h1 style={{ fontSize: '4vw', }}>Brianna Bell</h1>
+                <h1 style={{ fontSize: '5vw', fontFamily: 'Russo One'}}>Brianna Bell</h1>
                 <h3 style={{ fontSize: '1.5vw', margin: '0px' }}>Full-Stack Web Developer/</h3>
                 <h3 style={{ fontSize: '1.5vw', margin: '0px' }}>Geospatial Engineer </h3>
               </div>

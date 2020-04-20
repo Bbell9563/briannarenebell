@@ -4,10 +4,6 @@ import MobileNav from './container/MobileNav'
 
 
 class NavBar extends React.Component {
-  state = {
-    width: window.innerWidth
-  }
-
   componentDidMount() { window.addEventListener('resize', this.handleResize) }
 
 
@@ -15,27 +11,18 @@ class NavBar extends React.Component {
     console.log('here')
     this.props.toggleSideBar()
   }
-  
-  handleResize = () => {
-    this.setState({
-      width: window.innerWidth
-    })
-  }
 
   render() {
-    const { width } = this.state
-    if (width > 1000) {
-      return (
-        <DesktopNav />
-      )
-    }
-    else {
-      return (
-        <MobileNav showSide={this.props.showSide} toggleSideBar={this.props.toggleSideBar} />
-      )
-    }
+    return (
+      <>
+        {this.props.isMobile ?
+          <MobileNav showSide={this.props.showSide} toggleSideBar={this.props.toggleSideBar} />
+          :
+          <DesktopNav />
+        }
+      </>
+    )
   }
-
 }
 
 export default NavBar;

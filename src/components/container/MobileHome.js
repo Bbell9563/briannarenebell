@@ -5,10 +5,12 @@ import { Image, Icon } from 'semantic-ui-react'
 import Keyboard from '../../images/keyboard.jpg'
 
 
-export default class MobileDesktop extends React.Component {
+export default class MobileHome extends React.Component {
   state = { photoHeight: (window.innerWidth / 1.1), maxHeight: window.innerHeight - 100 }
 
   componentDidMount() { window.addEventListener('resize', this.handleResize) }
+
+  componentWillUnmount() {window.removeEventListener('resize', this.handleResize) }
 
   handleResize = () => {
     this.setState({

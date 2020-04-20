@@ -64,16 +64,8 @@ export const mobile = {
 export const appStyle = {
   window:{
     display:'flex',
-    backgroundImage: 'linear-gradient(to bottom right ,#0c0d12,#242b4d,#6d74a6'
-  },
-  navContainer:{
-    height:'8%'
-  },
-  pageContainer:{
-    height:'87%'
-  },
-  footerContainer:{
-    height:'5%'
+    backgroundImage: 'linear-gradient(to bottom right ,#0c0d12,#242b4d,#6d74a6',
+    fontFamily: 'Roboto Mono',
   }
 }
 
@@ -123,7 +115,7 @@ export const homeStyle ={
   description:{
     width:'70%',
     marginLeft:'5%',
-    padding:'5%',
+    padding:'3%',
     display:'flex',
     flexDirection:'column',
     justifyContent:'space-around',

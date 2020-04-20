@@ -1,14 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
+import DesktopPortfolio from '../components/container/Portfolio/DesktopPortfolio'
+import MobilePortfolio from '../components/container/Portfolio/MobilePortfolio'
 
-class Portfolio extends Component {
 
-  render() {
-    return (
-        <div style={{ textAlign: 'center', color: 'white', marginTop: '10%' , width:'100%'}}>
-          <h1>Portfolio Under Construction</h1>
-        </div>
-    )
-  }
-}
+const Resume = ({ isMobile }) => (
+  <>
+    {isMobile ?
+      <MobilePortfolio />
+      :
+      <DesktopPortfolio />
+    }
+  </>
+)
 
-export default Portfolio
+export default Resume

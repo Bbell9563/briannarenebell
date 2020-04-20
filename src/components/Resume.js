@@ -1,14 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
+import DesktopResume from '../components/container/Resume/DesktopResume'
+import MobileResume from '../components/container/Resume/MobileResume'
 
-class Resume extends Component {
 
-  render() {
-    return (
-        <div style={{ textAlign: 'center', color: 'white', marginTop: '10%', width:'100%'}}>
-          <h1>Resume Under Construction</h1>
-        </div>
-    )
-  }
-}
+const Resume = ({ isMobile }) => (
+  <>
+    {isMobile ?
+      <MobileResume />
+      :
+      <DesktopResume />
+    }
+  </>
+)
 
 export default Resume

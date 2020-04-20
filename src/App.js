@@ -9,13 +9,17 @@ import Resume from './components/Resume'
 import Portfolio from './components/Portfolio'
 
 class App extends React.Component {
-  state = { windowHeight: window.innerHeight, showSide: false }
+  state = { windowHeight: window.innerHeight,
+     showSide: false,
+     isMobile: false
+    }
 
   componentDidMount() { window.addEventListener('resize', this.handleResize) }
 
   handleResize = () => {
     this.setState({
-      windowHeight: window.innerHeight
+      windowHeight: window.innerHeight,
+      isMobile: window.innerWidth < 1000
     })
   }
 
@@ -25,24 +29,27 @@ class App extends React.Component {
   }
 
   render() {
-    const { windowHeight, showSide } = this.state
+    const { windowHeight, showSide, isMobile } = this.state
     return (
       <div style={{ minHeight: windowHeight ,...appStyle.window}}>
         <div style={{width:'100%'}}>
           <div>
-            <NavBar toggleSideBar={this.toggleSideBar} showSide={showSide} />
+            <NavBar isMobile={isMobile} toggleSideBar={this.toggleSideBar} showSide={showSide} />
           </div>
           <div>
             <Switch>
-              <Route exact path='/' component={() => <Home toggleSideBar={this.toggleSideBar} showSide={showSide} />} />
-              <Route exact path='/contactform' component={() => <ContactForm toggleSideBar={this.toggleSideBar} showSide={showSide} />} />
-              <Route exact path='/portfolio' component={() => <Portfolio toggleSideBar={this.toggleSideBar} showSide={showSide} />} />
-              <Route exact path='/resume' component={() => <Resume toggleSideBar={this.toggleSideBar} showSide={showSide} />} />
+              <Route exact path='/' component={() => <Home isMobile={isMobile} toggleSideBar={this.toggleSideBar} showSide={showSide} />} />
+              <Route exact path='/contactform' component={() => <ContactForm isMobile={isMobile} toggleSideBar={this.toggleSideBar} showSide={showSide} />} />
+              <Route exact path='/portfolio' component={() => <Portfolio isMobile={isMobile} toggleSideBar={this.toggleSideBar} showSide={showSide} />} />
+              <Route exact path='/resume' component={() => <Resume isMobile={isMobile} toggleSideBar={this.toggleSideBar} showSide={showSide} />} />
             </Switch>
           </div>
         </div>
         {showSide ?
           <div style={{ fontSize: '4vw', color: '#393d59', backgroundColor: '#1a1b2b', width:'35%' }}>
+            <Link style={{ color: '#393d59' }} to='/' onClick={this.toggleSideBar}>
+              <div style={style.sideBar}>Home</div>
+            </Link>
             <Link style={{ color: '#393d59' }} to='/portfolio' onClick={this.toggleSideBar}>
               <div style={style.sideBar}>Portfolio</div>
             </Link>
