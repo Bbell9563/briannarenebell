@@ -13,8 +13,6 @@ class DesktopContactForm extends Component {
   state = { ...this.defaultValues }
 
   handleChange = (e, { name, value }) => {
-    console.log(name)
-    console.log(value)
     this.setState({ ...this.state, [name]: value });
 
   };

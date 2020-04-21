@@ -17,7 +17,8 @@ class MobileContactForm extends Component {
     this.setState({ ...this.state, [name]: value });
 
   };
-  handleSubmit = () => {
+  handleSubmit = (e) => {
+    e.preventDefault()
     this.setState({ ...this.defaultValues })
   }
 
@@ -32,7 +33,9 @@ class MobileContactForm extends Component {
           placeholder='First Name'
           label='First Name'
           autoFocus
-          name='f_name' value={f_name}
+          name='f_name' 
+          value={f_name}
+          onChange={this.handleChange}
         />
         <Form.Input style={mobile.input}
           placeholder='Last Name'
@@ -48,12 +51,13 @@ class MobileContactForm extends Component {
           value={email_address}
           onChange={this.handleChange}
         />
-        <Form.TextArea style={mobile.input}
+        <Form.TextArea
           label='Message'
           placeholder='Your Message ...'
           name='message'
           value={message}
           onChange={this.handleChange}
+          style={{marginTop:'3%'}}
         />
         <div style={mobile.buttonHolder}>
           <Link to='/' style={{ color: '#a33636', ...mobile.button, backgroundColor: '#cccccc' }}><div>Cancel</div></Link>

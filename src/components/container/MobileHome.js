@@ -63,9 +63,6 @@ export default class MobileHome extends React.Component {
             <div style={homeMobile.about}>
               <h2>A Little About Me</h2>
             </div>
-            <div style={homeMobile.skills}>
-              <h2>Skills</h2>
-            </div>
 
           </div>
         </div>
