@@ -4,7 +4,8 @@ export default class MyForm extends React.Component {
     super(props);
     this.submitForm = this.submitForm.bind(this);
     this.state = {
-      status: ""
+      status: "",
+      name:''
     };
   }
 
@@ -16,12 +17,13 @@ export default class MyForm extends React.Component {
           onSubmit={this.submitForm}
           action="https://formspree.io/xgeljjny"
           method="POST"
+          id='form'
         >
           <div style={style.header}>Contact Me!</div>
           
           <div>
             <label style={style.label}>Name</label>
-            <input style={style.input} type="text" name="name" placeholder='Name'/>
+            <input style={style.input} type="text" id='name' name="name" placeholder='Name'/>
           </div>
           <div>
             <label style={style.label}>Email</label>
@@ -36,6 +38,14 @@ export default class MyForm extends React.Component {
             <button style={style.button}>Submit</button>
           </div>
         </form>
+        <div style={{display:'none'}} id='complete'>
+          <div style={style.complete}>Thank You </div>
+          <div style={style.complete}>{this.state.name}</div>
+          <div style={style.buttonHolder}>
+          <a href='/' style={style.home}><div>Done</div></a>
+          </div>
+
+        </div>
       </div>
     );
   }
@@ -50,8 +60,11 @@ export default class MyForm extends React.Component {
     xhr.onreadystatechange = () => {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
+        this.setState({name:document.getElementById('name').value })
         form.reset();
-        this.setState({ status: "SUCCESS" });
+        this.setState({ status: "SUCCESS"});
+        document.getElementById('form').style.display = 'none'
+        document.getElementById('complete').style.display = 'block'
       } else {
         this.setState({ status: "ERROR" });
       }
@@ -122,5 +135,24 @@ const style = {
     padding:'4%',
     marginBottom:'7%',
     fontFamily:'Russo One'
+  },
+  complete:{
+    fontSize:'7vw',
+    color:'white',
+    fontFamily:'Russo One',
+    padding:'8%'
+  },
+  home:{
+    width:'100%',
+    color:'white',
+    backgroundColor:'rgba(25, 27, 41, .5)',
+    borderRadius:'10px',
+    paddingTop:'5%',
+    margin:'0px',
+    cursor:'pointer',
+    fontSize:'4vw',
+    padding:'4%',
+    fontFamily:'Russo One',
+    textAlign:'center'
   }
 }
