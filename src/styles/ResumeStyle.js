@@ -26,9 +26,6 @@ export const desktop = {
   info:{
     width:'80%',
     backgroundColor:'rgba(73, 87, 138, .3)',
-    display:'flex',
-    flexDirection:'column',
-    justifyContent:'center'
   },
   tabs:{
     padding:'1% 5%',
