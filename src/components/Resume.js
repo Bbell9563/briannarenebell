@@ -17,7 +17,7 @@ class Resume extends React.Component {
   }
 
   render() {
-    const { holderHeight , component, mobileContainer} = this.state
+    const { holderHeight , component} = this.state
     const {isMobile} = this.props
     return (
       <div style={isMobile ? mobile.container:  desktop.container}>

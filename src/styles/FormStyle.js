@@ -24,7 +24,7 @@ export const form = {
     backgroundColor:'white',
     color:'black',
     width:'48%',
-    boxShadow:'0px 5px 10px #17181f',
+    boxShadow:'0px 3px 7px #444',
     borderRadius:'20px',
     textAlign:'center',
     padding:'1%', 
@@ -36,7 +36,7 @@ export const form = {
 
 export const mobile = {
   container:{
-    margin:'5% 10%',
+    margin:'15% 5%',
     backgroundColor: '#babecc',
     borderRadius:'10px',
     boxShadow:'0px 5px 20px #17181f',
@@ -61,7 +61,7 @@ export const mobile = {
     backgroundColor:'white',
     color:'black',
     width:'100%',
-    boxShadow:'0px 5px 10px #17181f',
+    boxShadow:'0px 3px 7px #444',
     borderRadius:'20px',
     textAlign:'center',
     padding:'5%', 

@@ -1,72 +1,127 @@
-import React, { Component } from 'react'
-import { Form } from 'semantic-ui-react'
-import { mobile } from '../../styles/FormStyle'
-import { Link } from 'react-router-dom'
+import React from "react";
 
-class MobileContactForm extends Component {
-
-  defaultValues = {
-    f_name: '',
-    l_name: '',
-    email_address: '',
-    message: '',
-  }
-  state = { ...this.defaultValues }
-
-  handleChange = (e, { name, value }) => {
-    this.setState({ ...this.state, [name]: value });
-
-  };
-  handleSubmit = (e) => {
-    e.preventDefault()
-    this.setState({ ...this.defaultValues })
+export default class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.submitForm = this.submitForm.bind(this);
+    this.state = {
+      status: ""
+    };
   }
 
   render() {
-    const { f_name, l_name, email_address, message } = this.state
+    const { status } = this.state;
     return (
-      <Form style={mobile.container} onSubmit={this.handleSubmit}>
-        <div style={mobile.header}>
-          <h1 style={{ fontSize: '8vw' }}>Contact Me!</h1>
-        </div>
-        <Form.Input style={mobile.input}
-          placeholder='First Name'
-          label='First Name'
-          autoFocus
-          name='f_name' 
-          value={f_name}
-          onChange={this.handleChange}
-        />
-        <Form.Input style={mobile.input}
-          placeholder='Last Name'
-          label='Last Name'
-          name='l_name'
-          value={l_name}
-          onChange={this.handleChange}
-        />
-        <Form.Input style={mobile.input}
-          label='Email'
-          placeholder='Email'
-          name='email_address'
-          value={email_address}
-          onChange={this.handleChange}
-        />
-        <Form.TextArea
-          label='Message'
-          placeholder='Your Message ...'
-          name='message'
-          value={message}
-          onChange={this.handleChange}
-          style={{marginTop:'3%'}}
-        />
-        <div style={mobile.buttonHolder}>
-          <Link to='/' style={{ color: '#a33636', ...mobile.button, backgroundColor: '#cccccc' }}><div>Cancel</div></Link>
-          <div style={{ ...mobile.button, backgroundColor: '#32247d', color: 'white' }} onClick={this.handleSubmit}>Submit</div>
-        </div>
-      </Form>
-    )
+      <div style={style.holder}>
+        <form
+          onSubmit={this.submitForm}
+          action="https://formspree.io/xgeljjny"
+          method="POST"
+        >
+          <div style={style.header}>Contact Me!</div>
+          
+          <div>
+            <label style={style.label}>Name</label>
+            <input style={style.input} type="name" name="name" placeholder='Name'/>
+          </div>
+          <div>
+            <label style={style.label}>Email</label>
+            <input style={style.input} type="email" name="email" placeholder='Email' />
+          </div>
+          <div>
+            <label style={style.label}>Message</label>
+            <textarea style={style.input} rows="4" cols="50" type="text" name="message" placeholder='Your Message...'/>
+          </div>
+          <div style={style.buttonHolder}>
+            <a href='/' style={style.cancel}><div >Cancel</div></a>
+            <button style={style.button}>Submit</button>
+          </div>
+        </form>
+      </div>
+    );
+  }
+
+  submitForm(ev) {
+    ev.preventDefault();
+    const form = ev.target;
+    const data = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset();
+        this.setState({ status: "SUCCESS" });
+      } else {
+        this.setState({ status: "ERROR" });
+      }
+    };
+    xhr.send(data);
   }
 }
 
-
-export default MobileContactForm
+const style = {
+  label: {
+    color: 'white',
+    margin:'2% 0px',
+    fontSize:'4vw',
+    fontFamily:'Russo One'
+  },
+  holder: {
+    margin: '20% 5%',
+    backgroundColor:'rgba(25, 27, 41, .5)',
+    borderRadius:'30px',
+    padding:'5%',
+  },
+  input:{
+    width:'100%',
+    border:'none',
+    margin:'5% 0px',
+    padding:'2%',
+    borderRadius:'10px',
+    outline:'none',
+    fontSize:'4vw',
+    fontFamily:'Russo One'
+  },
+  header:{
+    fontSize:'9vw',
+    textAlign:'center',
+    color:'white',
+    margin:'8% 0px',
+    fontFamily:'Russo One'
+  },
+  buttonHolder:{
+    display:'flex',
+    justifyContent:'space-between',
+    flexDirection:'column',
+    marginTop:'3%',
+  },
+  button:{
+    width:'100%',
+    color:'white',
+    backgroundColor:'#495191',
+    border:'none',
+    borderRadius:'10px',
+    padding:'1%',
+    margin:'0px',
+    cursor:'pointer',
+    fontSize:'4vw',
+    padding:'4%',
+    fontFamily:'Russo One'
+  },
+  cancel:{
+    width:'100%',
+    color:'white',
+    backgroundColor:'#9c2c19',
+    border:'none',
+    borderRadius:'10px',
+    padding:'1%',
+    textAlign:'center',
+    cursor:'pointer',
+    fontSize:'4vw',
+    padding:'4%',
+    marginBottom:'7%',
+    fontFamily:'Russo One'
+  }
+}
