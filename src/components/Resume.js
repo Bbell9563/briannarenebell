@@ -26,16 +26,16 @@ class Resume extends React.Component {
         </div>
         <div style={isMobile ?  {...mobile.holder ,height: holderHeight} :{ ...desktop.holder, height: holderHeight }}>
           <div style={desktop.tabHolder}>
-            <div onMouseEnter={() => this.changeActive('contact')} id='contact' style={isMobile ? { ...mobile.tabs, border: 'none' } : { ...desktop.tabs, border: 'none' }}>
+            <div onClick={() => this.changeActive('contact')} onMouseEnter={() => this.changeActive('contact')} id='contact' style={isMobile ? { ...mobile.tabs, border: 'none' } : { ...desktop.tabs, border: 'none' }}>
               Contact Info
             </div>
-            <div onMouseEnter={() => this.changeActive('skills')} id='skills' style={isMobile ? mobile.tabs : desktop.tabs}>
+            <div onClick={() => this.changeActive('skills')} onMouseEnter={() => this.changeActive('skills')} id='skills' style={isMobile ? mobile.tabs : desktop.tabs}>
               Skills
             </div>
-            <div onMouseEnter={() => this.changeActive('experience')} id='experience' style={isMobile ? mobile.tabs : desktop.tabs}>
+            <div onClick={() => this.changeActive('experience')} onMouseEnter={() => this.changeActive('experience')} id='experience' style={isMobile ? mobile.tabs : desktop.tabs}>
               Experience
             </div>
-            <div onMouseEnter={() => this.changeActive('education')} id='education' style={isMobile ? mobile.tabs : desktop.tabs}>
+            <div onClick={() => this.changeActive('education')} onMouseEnter={() => this.changeActive('education')} id='education' style={isMobile ? mobile.tabs : desktop.tabs}>
               Education
             </div>
           </div>
