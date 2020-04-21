@@ -19,7 +19,7 @@ class App extends React.Component {
   handleResize = () => {
     this.setState({
       windowHeight: window.innerHeight,
-      isMobile: window.innerWidth < 1000
+      isMobile: window.innerWidth < 981
     })
   }
 

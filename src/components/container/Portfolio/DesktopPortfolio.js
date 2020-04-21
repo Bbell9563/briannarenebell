@@ -2,7 +2,7 @@ import React from 'react'
 import { desktop } from '../../../styles/PortfolioStyle'
 
 
-class MobileResume extends React.Component {
+class DesktopPortfolio extends React.Component {
 
   render() {
     return (
@@ -15,4 +15,4 @@ class MobileResume extends React.Component {
   }
 }
 
-export default MobileResume
+export default DesktopPortfolio
