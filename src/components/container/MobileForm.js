@@ -22,15 +22,15 @@ export default class MyForm extends React.Component {
           
           <div>
             <label style={style.label}>Name</label>
-            <input style={style.input} type="name" name="name" placeholder='Name'/>
+            <input style={style.input} type="text" name="name" placeholder='Name'/>
           </div>
           <div>
             <label style={style.label}>Email</label>
-            <input style={style.input} type="email" name="email" placeholder='Email' />
+            <input style={style.input} type="text" name="email" placeholder='Email' />
           </div>
           <div>
             <label style={style.label}>Message</label>
-            <textarea style={style.input} rows="4" cols="50" type="text" name="message" placeholder='Your Message...'/>
+            <textarea type='text'style={style.input} rows="4" cols="50" type="text" name="message" placeholder='Your Message...'/>
           </div>
           <div style={style.buttonHolder}>
             <a href='/' style={style.cancel}><div >Cancel</div></a>
@@ -75,6 +75,14 @@ const style = {
     padding:'5%',
   },
   input:{
+    width:'100%',
+    border:'none',
+    margin:'5% 0px',
+    padding:'2%',
+    borderRadius:'10px',
+    outline:'none',
+    fontSize:'4vw',
+    fontFamily:'Russo One'
   },
   header:{
     fontSize:'9vw',
