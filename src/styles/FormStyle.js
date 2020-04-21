@@ -1,7 +1,7 @@
 export const form = {
   container:{
     margin:'5% 20%',
-    backgroundColor: '#babecc',
+    backgroundColor: '#99a0c9',
     borderRadius:'10px',
     boxShadow:'0px 5px 20px #17181f',
     padding:'2%',
@@ -49,9 +49,8 @@ export const mobile = {
     fontSize:'8vw'
   },
   input:{
-    color:'white',
+    color:'black',
     marginTop:'2%',
-    backgroundColor:'none',
   },
   buttonHolder:{
     display:'flex',

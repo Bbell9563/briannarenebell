@@ -51,7 +51,7 @@ class DesktopContactForm extends Component {
           value={email_address}
           onChange={this.handleChange}
         />
-        <Form.TextArea style={form.input}
+        <Form.TextArea
           label='Message'
           placeholder='Your Message ...'
           name='message'

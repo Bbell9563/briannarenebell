@@ -14,12 +14,15 @@ class App extends React.Component {
      isMobile: false
     }
 
-  componentDidMount() { window.addEventListener('resize', this.handleResize) }
+  componentDidMount() { 
+    this.setState({isMobile: window.innerWidth < 1000})
+    window.addEventListener('resize', this.handleResize) 
+  }
 
   handleResize = () => {
     this.setState({
       windowHeight: window.innerHeight,
-      isMobile: window.innerWidth < 981
+      isMobile: window.innerWidth < 1000
     })
   }
 

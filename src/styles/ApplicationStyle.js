@@ -65,7 +65,6 @@ export const appStyle = {
   window:{
     display:'flex',
     backgroundImage: 'linear-gradient(to bottom right ,#0c0d12,#242b4d,#6d74a6',
-    fontFamily: 'Roboto Mono',
   }
 }
 

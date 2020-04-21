@@ -25,7 +25,10 @@ export const desktop = {
   },
   info:{
     width:'80%',
-    backgroundColor:'rgba(73, 87, 138, .3)'
+    backgroundColor:'rgba(73, 87, 138, .3)',
+    display:'flex',
+    flexDirection:'column',
+    justifyContent:'center'
   },
   tabs:{
     padding:'1% 5%',
@@ -34,7 +37,8 @@ export const desktop = {
     display:'flex',
     flexDirection:'column',
     justifyContent:'center',
-    backgroundColor:'rgba(25, 27, 41, .7)'
+    backgroundColor:'rgba(25, 27, 41, .7)',
+    borderTop: '1px solid #3b4763'
 
   },
   tabHolder:{
@@ -44,6 +48,50 @@ export const desktop = {
     flexDirection:'column',
     justifyContent:'space-between',
     height:'100%',
+  },
+  imageIcon:{
+    display: 'inline-block',
+    verticalAlign: 'top',
+    width: '10%',
+    overflow: 'hidden',
+    height:'75px',
+    borderRadius:'50%',
+    padding:'1%',
+    backgroundColor:'white'
+  },
+  image:{
+    display: 'block',
+    minWidth: '100%',
+    minHeight: '100%',
+    margin: ' auto',
+    position: 'absolute',
+    top: '-100%',
+    right: '-100%',
+    bottom: '-100%',
+    left: '-100%',
+  },
+  crop: {
+    height: '100%',
+    position: 'relative',
+  },
+  icon:{
+    fontSize:'5vw',
+    paddingTop:'3%',
+    margin:' 4% 10%'
+  },
+  skills:{
+    display:'flex',
+    flexWrap:'wrap',
+    justifyContent:'center',
+  },
+  contact:{
+    fontSize:'2vw',
+    height:'80%',
+    width:'90%',
+    margin:'5% 10%',
+    display:'flex',
+    flexDirection:'column',
+    justifyContent:'space-between'
   }
 }
 
@@ -63,7 +111,7 @@ export const mobile = {
     margin:'4%'
   },
   holder:{
-    margin:'10% 15%',
+    margin:'10% 5%',
     borderRadius:'15px',
     display:'flex',
     justifyContent:'space-between',
@@ -72,7 +120,10 @@ export const mobile = {
   },
   info:{
     width:'80%',
-    backgroundColor:'rgba(73, 87, 138, .3)'
+    backgroundColor:'rgba(73, 87, 138, .3)',
+    display:'flex',
+    flexDirection:'column',
+    justifyContent:'center'
   },
   tabs:{
     padding:'1% 5%',
@@ -81,7 +132,8 @@ export const mobile = {
     display:'flex',
     flexDirection:'column',
     justifyContent:'center',
-    backgroundColor:'rgba(25, 27, 41, .7)'
+    backgroundColor:'rgba(25, 27, 41, .7)',
+    borderTop: '1px solid #3b4763'
 
   },
   tabHolder:{
@@ -91,5 +143,49 @@ export const mobile = {
     flexDirection:'column',
     justifyContent:'space-between',
     height:'100%',
+  },
+  imageIcon:{
+    display: 'inline-block',
+    verticalAlign: 'top',
+    width: '10%',
+    overflow: 'hidden',
+    height:'75px',
+    borderRadius:'50%',
+    padding:'1%',
+    backgroundColor:'white'
+  },
+  image:{
+    display: 'block',
+    minWidth: '100%',
+    minHeight: '100%',
+    margin: ' auto',
+    position: 'absolute',
+    top: '-100%',
+    right: '-100%',
+    bottom: '-100%',
+    left: '-100%',
+  },
+  crop: {
+    height: '100%',
+    position: 'relative',
+  },
+  icon:{
+    fontSize:'5vw',
+    paddingTop:'3%',
+    margin:' 4% 10%'
+  },
+  skills:{
+    display:'flex',
+    flexWrap:'wrap',
+    justifyContent:'center',
+  },
+  contact:{
+    fontSize:'2vw',
+    height:'80%',
+    width:'90%',
+    margin:'5% 10%',
+    display:'flex',
+    flexDirection:'column',
+    justifyContent:'space-between'
   }
 }
