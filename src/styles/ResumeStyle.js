@@ -116,16 +116,15 @@ export const mobile = {
     boxShadow:'0px 5px 10px #11141f'
   },
   info:{
-    width:'80%',
     backgroundColor:'rgba(73, 87, 138, .3)',
     display:'flex',
     flexDirection:'column',
     justifyContent:'center'
   },
   tabs:{
-    padding:'1% 5%',
+    padding:'1% 2%',
     height:'25%',
-    fontSize:'1.5vw',
+    fontSize:'3vw',
     display:'flex',
     flexDirection:'column',
     justifyContent:'center',
@@ -144,11 +143,11 @@ export const mobile = {
   imageIcon:{
     display: 'inline-block',
     verticalAlign: 'top',
-    width: '10%',
+    width: '25%',
     overflow: 'hidden',
-    height:'75px',
+    height:'175px',
     borderRadius:'50%',
-    padding:'1%',
+    padding:'4%',
     backgroundColor:'white'
   },
   image:{
@@ -167,14 +166,15 @@ export const mobile = {
     position: 'relative',
   },
   icon:{
-    fontSize:'5vw',
+    fontSize:'17vw',
     paddingTop:'3%',
-    margin:' 4% 10%'
+    margin:' 4% 5%'
   },
   skills:{
     display:'flex',
     flexWrap:'wrap',
     justifyContent:'center',
+    marginTop:'15%'
   },
   contact:{
     fontSize:'2vw',
