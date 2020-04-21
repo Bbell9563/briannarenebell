@@ -11,12 +11,12 @@ import Portfolio from './components/Portfolio'
 class App extends React.Component {
   state = { windowHeight: window.innerHeight,
      showSide: false,
-     isMobile: false
+     isMobile: true
     }
 
   componentDidMount() { 
     this.setState({isMobile: window.innerWidth < 1000})
-    window.addEventListener('resize', this.handleResize) 
+    // window.addEventListener('resize', this.handleResize) 
   }
 
   handleResize = () => {
