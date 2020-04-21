@@ -22,7 +22,7 @@ export default class MyForm extends React.Component {
           
           <div>
             <label style={style.label}>Name</label>
-            <input className='form-input' style={style.input} type="text" name="name" placeholder='Name'/>
+            <input type="text" name="name"/>
           </div>
           <div>
             <label style={style.label}>Email</label>
