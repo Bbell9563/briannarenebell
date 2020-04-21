@@ -1,5 +1,4 @@
 import React from "react";
-import {Input} from 'semantic-ui-react'
 export default class MyForm extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +18,6 @@ export default class MyForm extends React.Component {
           method="POST"
         >
           <div style={style.header}>Contact Me!</div>
-          <Input />
           
           <div>
             <label style={style.label}>Name</label>
