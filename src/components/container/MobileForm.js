@@ -75,14 +75,6 @@ const style = {
     padding:'5%',
   },
   input:{
-    width:'100%',
-    border:'none',
-    margin:'5% 0px',
-    padding:'2%',
-    borderRadius:'10px',
-    outline:'none',
-    fontSize:'4vw',
-    fontFamily:'Russo One'
   },
   header:{
     fontSize:'9vw',
