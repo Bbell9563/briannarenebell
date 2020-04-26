@@ -9,7 +9,6 @@ export default class MobileHome extends React.Component {
   state = { photoHeight: (window.innerWidth / 1.1), maxHeight: window.innerHeight - 100 }
 
   componentDidMount() { window.addEventListener('resize', this.handleResize) }
-
   componentWillUnmount() {window.removeEventListener('resize', this.handleResize) }
 
   handleResize = () => {
@@ -61,7 +60,16 @@ export default class MobileHome extends React.Component {
           </div>
           <div style={homeMobile.extraInfo}>
             <div style={homeMobile.about}>
-              <h2>A Little About Me</h2>
+            <h2>A Little About Me</h2>
+            <p>
+              I grew up in a military family, moved around a lot growing up. In ended up in kansas, where I
+              completed my first year of college. I then decided to move to Utah to give me more options.
+              After a couple month of being in Utah, I joined the military as a geospatial engineer. I went to 
+              training, when I came back I started working as a geospatial with the Engineering department of 
+              Camp Williams DPW. After that, my partner suggested doing a coding bootcamp. I thought it was a 
+              good idea and started DevPoint Labs Full-Stack Bootcamp. This is when I learned that I am super 
+              passionate about software engineering. I had tons of fun and enjoy learning these new things everyday.
+            </p>
             </div>
 
           </div>

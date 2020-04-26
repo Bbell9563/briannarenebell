@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { style } from '../../styles/ApplicationStyle'
+import styled from 'styled-components'
 
 
 class DesktopNavBar extends React.Component {
 
   render() {
     return (
-      <div style={style.menuHolder}>
+      <MenuHolder>
         <div style={style.left}>
           <Link to='/' style={{ color: 'white',...style.item,}}>
             <div >
@@ -38,9 +39,19 @@ class DesktopNavBar extends React.Component {
 
         </div>
 
-      </div>
+      </MenuHolder>
     )
   }
 }
+
+const MenuHolder = styled.div `{
+  background-color: #0f111a;
+  color: #ffffff;
+  display: none;
+  @media(min-width: 770px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}`
 
 export default DesktopNavBar;

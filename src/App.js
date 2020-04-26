@@ -7,6 +7,7 @@ import Home from './components/Home'
 import ContactForm from './components/ContactForm'
 import Resume from './components/Resume'
 import Portfolio from './components/Portfolio'
+import Layout from './components/Layout'
 
 class App extends React.Component {
   state = { windowHeight: window.innerHeight,
@@ -36,6 +37,7 @@ class App extends React.Component {
     return (
       <div style={{ minHeight: windowHeight ,...appStyle.window}}>
         <div style={{width:'100%'}}>
+          <Layout >
           <div>
             <NavBar isMobile={isMobile} toggleSideBar={this.toggleSideBar} showSide={showSide} />
           </div>
@@ -47,24 +49,8 @@ class App extends React.Component {
               <Route exact path='/resume' component={() => <Resume isMobile={isMobile} toggleSideBar={this.toggleSideBar} showSide={showSide} />} />
             </Switch>
           </div>
+          </Layout>
         </div>
-        {showSide ?
-          <div style={{ fontSize: '4vw', color: '#393d59', backgroundColor: '#1a1b2b', width:'35%' }}>
-            <Link style={{ color: '#393d59' }} to='/' onClick={this.toggleSideBar}>
-              <div style={style.sideBar}>Home</div>
-            </Link>
-            <Link style={{ color: '#393d59' }} to='/portfolio' onClick={this.toggleSideBar}>
-              <div style={style.sideBar}>Portfolio</div>
-            </Link>
-            <Link style={{ color: '#393d59' }} to='/resume' onClick={this.toggleSideBar}>
-              <div style={style.sideBar}>Resume</div>
-            </Link>
-            <Link style={{ color: '#393d59' }} to='/contactform' onClick={this.toggleSideBar}>
-              <div style={style.sideBar}>Contact</div>
-            </Link>
-          </div>
-
-          : <></>}
           
       </div>
     );
