@@ -1,4 +1,5 @@
 import React from 'react'
+import Game from './Game'
 import { 
   Card,
   Header, 
@@ -6,7 +7,6 @@ import {
   GameHolder,
   TextHolder
 } from '../CardStyle'
-import { Image } from 'semantic-ui-react'
 
 class BlackJack extends React.Component {
   render(){
@@ -15,10 +15,9 @@ class BlackJack extends React.Component {
         <Header>Black Jack</Header>
         <Information>
           <GameHolder>
-            <Image 
-            src={'https://images.freeimages.com/images/large-previews/4dc/free-casino-table-cloth-texture-1637741.jpg'}
-            style={{position:'relative'}}
-            />
+            <Game style={{position:'absolute', top:'0', left:'0'}}/>
+
+            
           </GameHolder>
           <TextHolder>About the process</TextHolder>
         </Information>

@@ -6,6 +6,7 @@ export const MainImage = styled.div`{
   height: 290px;
   border-radius: 10px;
   overflow:hidden;
+  
 }`
 
 export const AImage = styled.div`{
@@ -20,6 +21,9 @@ export const MediaHolder = styled.div`{
   border-radius: 10px;
   height: 350px;
   overflow:hidden;
+  @media(max-width: 600px) {
+    width: 100%;
+  }
 }`
 
 export const AltImage = styled.div`{

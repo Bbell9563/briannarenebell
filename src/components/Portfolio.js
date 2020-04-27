@@ -7,7 +7,7 @@ const Resume = () => (
   <>
     <div>
       <DPLStore />
-      <BlackJack />
+      {/* <BlackJack /> */}
     </div>
   </>
 )
