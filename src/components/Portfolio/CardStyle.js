@@ -4,7 +4,6 @@ export const MainImage = styled.div`{
   width:80%;
   margin: 2% 10%;
   height: 290px;
-  border-radius: 10px;
   overflow:hidden;
   
 }`
@@ -23,6 +22,7 @@ export const MediaHolder = styled.div`{
   overflow:hidden;
   @media(max-width: 600px) {
     width: 100%;
+    height: 200px;
   }
 }`
 
